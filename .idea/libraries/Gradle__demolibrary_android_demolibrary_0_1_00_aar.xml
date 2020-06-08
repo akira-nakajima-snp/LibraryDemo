@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: demolibrary.android:demolibrary:0.1.00@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7a7f5df87aa57366898b5057b0d98b0c/jetified-demolibrary-0.1.00/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7a7f5df87aa57366898b5057b0d98b0c/jetified-demolibrary-0.1.00/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
