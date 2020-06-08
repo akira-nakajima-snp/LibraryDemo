@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A69F562E248DFD7600467D78 /* DemoUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69F562D248DFD7600467D78 /* DemoUtils.swift */; };
 		A6CFDB20248DF96400F2CC17 /* LibraryDemo.h in Headers */ = {isa = PBXBuildFile; fileRef = A6CFDB1E248DF96400F2CC17 /* LibraryDemo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A69F562D248DFD7600467D78 /* DemoUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUtils.swift; sourceTree = "<group>"; };
 		A6CFDB1B248DF96400F2CC17 /* LibraryDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LibraryDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6CFDB1E248DF96400F2CC17 /* LibraryDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LibraryDemo.h; sourceTree = "<group>"; };
 		A6CFDB1F248DF96400F2CC17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 			children = (
 				A6CFDB1E248DF96400F2CC17 /* LibraryDemo.h */,
 				A6CFDB1F248DF96400F2CC17 /* Info.plist */,
+				A69F562D248DFD7600467D78 /* DemoUtils.swift */,
 			);
 			path = LibraryDemo;
 			sourceTree = "<group>";
@@ -74,6 +77,7 @@
 				A6CFDB17248DF96300F2CC17 /* Sources */,
 				A6CFDB18248DF96300F2CC17 /* Frameworks */,
 				A6CFDB19248DF96300F2CC17 /* Resources */,
+				A6CFDB27248DFB1100F2CC17 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -95,6 +99,7 @@
 				TargetAttributes = {
 					A6CFDB1A248DF96300F2CC17 = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -126,11 +131,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A6CFDB27248DFB1100F2CC17 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A6CFDB17248DF96300F2CC17 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A69F562E248DFD7600467D78 /* DemoUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +286,7 @@
 		A6CFDB24248DF96400F2CC17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7FVA3NE35B;
@@ -276,6 +303,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.altonotes.LibraryDemo;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +312,7 @@
 		A6CFDB25248DF96400F2CC17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7FVA3NE35B;
